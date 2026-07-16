@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deine persönliche Seelenmusik — Christine Rojek</title>
+<meta name="description" content="Ein individuell komponiertes Musikstück, nur für dich — zum Zuhören, Liegen und Nachspüren.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="site-header__name">Christine Rojek<span>Harfenmusik</span></a>
+  <nav class="site-nav">
+    <ul class="site-nav__list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ueber-mich.html">Über mich</a></li>
+      <li><a href="hoerproben.html">Hörproben</a></li>
+      <li><a href="angebot.html" aria-current="page">Angebot</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" aria-expanded="false" aria-label="Menü öffnen"><span></span></button>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split__media">
+        <img src="img/bw-steps.jpg" alt="Christine Rojek mit ihrer Harfe">
+      </div>
+      <div class="split__content">
+        <div class="eyebrow">Ein besonderes Angebot</div>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.8rem);">Deine persönliche Seelenmusik</h2>
+        <p>Ich spüre mich in deine Antworten hinein und nehme ein Musikstück auf, das ganz alleine für dich entsteht. In der Regel ist das eine kurze Version von zwei bis drei Minuten. Ich empfehle, das Stück im Liegen mit Kopfhörern anzuhören, dich von der Musik begleiten zu lassen und zu beobachten, was dabei in dir passiert. Gerne kann danach noch ein zusätzliches Gespräch gebucht werden, um tiefer in das Erlebte einzutauchen.</p>
+        <p style="font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--brown-deep); margin-bottom: 1.6rem;">Kosten: 50€</p>
+        <a href="#buchen" class="btn btn--primary">Jetzt buchen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="eyebrow center">So funktioniert es</div>
+    <h2 class="section-title center">Ablauf</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step__number">01</div>
+        <h3>Du beantwortest drei Fragen</h3>
+        <p>Über ein kurzes Formular beantwortest du drei Fragen — das gibt mir einen Einblick, wie es dir gerade geht.</p>
+      </div>
+      <div class="step">
+        <div class="step__number">02</div>
+        <h3>Ich spüre mich ein</h3>
+        <p>Auf Basis deiner Antworten nehme ich mir Zeit, spüre mich in dich hinein und nehme ein individuelles Musikstück auf.</p>
+      </div>
+      <div class="step">
+        <div class="step__number">03</div>
+        <h3>Du hörst &amp; spürst nach</h3>
+        <p>Du erhältst dein persönliches Stück und hörst es im Liegen mit Kopfhörern — lass dich einfach von der Musik tragen. Optional kannst du danach ein Gespräch dazubuchen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="buchen" class="section section--alt">
+  <div class="container">
+    <div class="eyebrow">Jetzt buchen</div>
+    <h2 class="section-title">Deine drei Fragen</h2>
+    <p class="lede">Beantworte mir die folgenden drei Fragen — das gibt mir einen ersten Einblick, bevor ich mich in dich einspüre. Kosten: 50€, die Rechnung bekommst du nach der Buchung persönlich von mir per E-Mail.</p>
+
+    <!--
+      TODO (Lisa): Formspark-Endpoint eintragen, sobald das Formular unter
+      https://formspark.io angelegt ist. Aktuell ist hier ein Platzhalter.
+    -->
+    <form class="form" action="https://submit-form.com/DEIN-FORMSPARK-ENDPOINT" method="POST">
+      <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="form-row">
+        <label for="sm-name">Name</label>
+        <input type="text" id="sm-name" name="Name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="sm-email">E-Mail</label>
+        <input type="email" id="sm-email" name="Email" required>
+      </div>
+
+      <div class="form-row">
+        <label for="sm-frage1">Wie geht es dir gerade, was beschäftigt dich im Moment am meisten?</label>
+        <textarea id="sm-frage1" name="Frage 1" required></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="sm-frage2">Was wünschst du dir von deinem Musikstück? (z. B. Ruhe, Kraft, Trost, Freude, Loslassen)</label>
+        <textarea id="sm-frage2" name="Frage 2" required></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="sm-frage3">Gibt es etwas, das ich über dich wissen sollte, bevor ich mich einspüre?</label>
+        <textarea id="sm-frage3" name="Frage 3"></textarea>
+      </div>
+
+      <p class="form-note">Mit dem Absenden buchst du dein persönliches Musikstück verbindlich (50€) und stimmst der Verarbeitung deiner Daten gemäß unserer <a href="datenschutz.html" style="text-decoration:underline;">Datenschutzerklärung</a> zu. Die Zahlung läuft nicht über die Website — du erhältst die Rechnung persönlich per E-Mail.</p>
+
+      <div>
+        <button type="submit" class="btn btn--primary">Jetzt buchen</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="cta-band cta-band--lavender" style="--wave-x: 100%;">
+  <h2>Bereit für deine persönliche Seelenmusik?</h2>
+  <p>Beantworte die drei Fragen, ich melde mich persönlich mit deinem Musikstück zurück.</p>
+  <a href="#buchen" class="btn btn--dark">Jetzt buchen</a>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div>
+        <div class="site-footer__brand">Christine Rojek</div>
+        <p class="site-footer__tagline">Harfenmusik, die Räume mit Klang füllt und Seelen berührt.</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="hoerproben.html">Hörproben</a></li>
+          <li><a href="angebot.html">Angebot</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li><a href="mailto:info@christine-rojek.at">info@christine-rojek.at</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&copy; 2026 Christine Rojek</span>
+      <span><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>

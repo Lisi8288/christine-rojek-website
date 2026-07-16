@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt — Christine Rojek</title>
+<meta name="description" content="Schreib mir für deine Anfrage — Hochzeit, Veranstaltung, Unterricht oder deine persönliche Seelenmusik.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="site-header__name">Christine Rojek<span>Harfenmusik</span></a>
+  <nav class="site-nav">
+    <ul class="site-nav__list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ueber-mich.html">Über mich</a></li>
+      <li><a href="hoerproben.html">Hörproben</a></li>
+      <li><a href="angebot.html">Angebot</a></li>
+      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" aria-expanded="false" aria-label="Menü öffnen"><span></span></button>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="eyebrow">Kontakt</div>
+    <h2 class="section-title">Ich freue mich auf deine Anfrage</h2>
+    <p class="lede">Ob Hochzeit, Veranstaltung, Unterricht oder deine persönliche Seelenmusik — schreib mir gerne, ich melde mich so bald wie möglich persönlich zurück.</p>
+
+    <!--
+      TODO (Lisa): Formspark-Endpoint eintragen, sobald das Formular unter
+      https://formspark.io angelegt ist. Aktuell ist hier ein Platzhalter.
+    -->
+    <form class="form" action="https://submit-form.com/DEIN-FORMSPARK-ENDPOINT" method="POST">
+      <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Deine Nachricht</label>
+        <textarea id="message" name="Nachricht" required placeholder="Erzähl mir gerne, um welchen Anlass es geht, wann und wo er stattfindet, und was dir wichtig ist."></textarea>
+      </div>
+
+      <p class="form-note">Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer <a href="datenschutz.html" style="text-decoration:underline;">Datenschutzerklärung</a> zu.</p>
+
+      <div>
+        <button type="submit" class="btn btn--primary">Nachricht senden</button>
+      </div>
+    </form>
+
+    <div style="margin-top: 3rem; color: var(--text-soft); font-size: 0.95rem;">
+      <p>Oder schreib mir direkt an <a href="mailto:info@christine-rojek.at" style="text-decoration:underline; color: var(--terracotta);">info@christine-rojek.at</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div>
+        <div class="site-footer__brand">Christine Rojek</div>
+        <p class="site-footer__tagline">Harfenmusik, die Räume mit Klang füllt und Seelen berührt.</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="hoerproben.html">Hörproben</a></li>
+          <li><a href="angebot.html">Angebot</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li><a href="mailto:info@christine-rojek.at">info@christine-rojek.at</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&copy; 2026 Christine Rojek</span>
+      <span><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>
