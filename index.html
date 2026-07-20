@@ -25,10 +25,18 @@
   <button class="nav-toggle" aria-expanded="false" aria-label="Menü öffnen"><span></span></button>
 </header>
 
-<section class="hero">
-  <img class="hero__img" src="img/hero-wide.jpg" alt="Christine Rojek mit ausgebreiteten Armen neben ihrer Harfe am Teich">
-  <h1 class="hero__title">Christine Rojek</h1>
-  <p class="hero__phrase">Musik, die uns an die Farben der Seele erinnert</p>
+<section class="hero-split">
+  <div class="hero-split__color">
+    <h1 class="hero-split__tagline"><span class="tagline-line">Harfenmusik,</span><span class="tagline-line tagline-line--2">die an die Farben</span><span class="tagline-line tagline-line--3">der Seelen erinnert</span></h1>
+  </div>
+  <div class="hero-split__media">
+    <img src="img/hero-forest.jpg" alt="Christine Rojek liegt mit ihrer Harfe im Wald">
+  </div>
+  <div class="hero-split__bubble">
+    <h3>Deine persönliche<br>Seelenmusik</h3>
+    <p>Ein individuelles Musikstück, komponiert nur für dich — zum Zuhören, Liegen und Nachspüren.</p>
+    <a href="seelenmusik.html" class="hero-split__bubble-btn">Mehr erfahren <span aria-hidden="true">&#8594;</span></a>
+  </div>
 </section>
 
 <section class="section">
@@ -55,7 +63,7 @@
       </div>
       <div class="split__content">
         <div class="eyebrow">Über mich</div>
-        <h2>Hallo, ich bin Christine</h2>
+        <h2 class="intro-title">Hallo, ich bin Christine</h2>
         <p>Ich spiele seit über 30 Jahren die Harfe. Mein besonderes Herzensgebiet ist die Improvisation: Ich nehme die Atmosphäre eines Raumes und der Menschen wahr und lasse daraus im Moment Musik entstehen. Für mich ist die Harfe weit mehr als ein Instrument — sie berührt Menschen, füllt Räume mit Klang und erinnert uns an die Farben der Seele.</p>
         <a href="ueber-mich.html" class="btn btn--outline">Meine Geschichte lesen</a>
       </div>
@@ -171,7 +179,7 @@
 <script>
   (function () {
     var glow = document.getElementById('homeGlowClef');
-    var hero = document.querySelector('.hero');
+    var hero = document.querySelector('.hero-split');
     if (!glow || !hero) return;
     function toggleGlow() {
       var heroBottom = hero.getBoundingClientRect().bottom;

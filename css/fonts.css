@@ -47,3 +47,31 @@
   font-display: swap;
   src: url('../fonts/Jost-500-normal.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/InstrumentSerif-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Cabin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/BarlowCondensed-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/BarlowCondensed-400-normal.woff2') format('woff2');
+}
