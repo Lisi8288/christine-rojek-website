@@ -26,20 +26,38 @@
 </header>
 
 <section class="hero-split">
-  <div class="hero-split__color">
-    <h1 class="hero-split__tagline"><span class="tagline-line">Harfenmusik,</span><span class="tagline-line tagline-line--2">die an die Farben</span><span class="tagline-line tagline-line--3">der Seelen erinnert</span></h1>
-  </div>
   <div class="hero-split__media">
     <img src="img/hero-forest.jpg" alt="Christine Rojek liegt mit ihrer Harfe im Wald">
   </div>
+  <div class="hero-split__color">
+    <h1 class="hero-split__tagline"><span class="tagline-line">Harfenmusik,</span><span class="tagline-line tagline-line--2">die an die Farben</span><span class="tagline-line tagline-line--3">der Seelen erinnert</span></h1>
+  </div>
   <div class="hero-split__bubble">
-    <h3>Deine persönliche<br>Seelenmusik</h3>
+    <h3>Deine persönliche Seelenmusik</h3>
     <p>Ein individuelles Musikstück, komponiert nur für dich — zum Zuhören, Liegen und Nachspüren.</p>
     <a href="seelenmusik.html" class="hero-split__bubble-btn">Mehr erfahren <span aria-hidden="true">&#8594;</span></a>
   </div>
 </section>
 
 <section class="section">
+  <div class="container">
+    <div class="split split--reverse">
+      <div class="split__media photo-rotator">
+        <img class="photo-rotator__img is-active" src="img/IMG_1160-2.jpg" alt="Christine Rojek">
+        <img class="photo-rotator__img" src="img/christine_rojek-171.jpg" alt="Christine Rojek">
+        <img class="photo-rotator__img" src="img/christine_rojek-316.jpg" alt="Christine Rojek">
+      </div>
+      <div class="split__content split__content--center">
+        <div class="eyebrow">Über mich</div>
+        <h2 class="intro-title intro-title--lg">Hallo, ich bin Christine</h2>
+        <p>Ich spiele seit über 30 Jahren die Harfe. Mein besonderes Herzensgebiet ist die Improvisation: Ich nehme die Atmosphäre eines Raumes und der Menschen wahr und lasse daraus im Moment Musik entstehen. Für mich ist die Harfe weit mehr als ein Instrument — sie berührt Menschen, füllt Räume mit Klang und erinnert uns an die Farben der Seele.</p>
+        <a href="ueber-mich.html" class="btn btn--green">Meine Geschichte lesen <span aria-hidden="true">&#8594;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt section--lavender">
   <div class="container">
     <div class="split">
       <div class="audio-card audio-card--soft">
@@ -50,22 +68,6 @@
       <div class="split__content">
         <div class="eyebrow eyebrow--feature">Auszeit</div>
         <p class="lede">Nimm dir eine kleine Auszeit, bevor du mehr über mich und mein Angebot erfährst.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt">
-  <div class="container">
-    <div class="split split--reverse">
-      <div class="split__media">
-        <img src="img/casual-lean.jpg" alt="Christine Rojek lehnt neben ihrer Harfe an einer Holzwand">
-      </div>
-      <div class="split__content">
-        <div class="eyebrow">Über mich</div>
-        <h2 class="intro-title">Hallo, ich bin Christine</h2>
-        <p>Ich spiele seit über 30 Jahren die Harfe. Mein besonderes Herzensgebiet ist die Improvisation: Ich nehme die Atmosphäre eines Raumes und der Menschen wahr und lasse daraus im Moment Musik entstehen. Für mich ist die Harfe weit mehr als ein Instrument — sie berührt Menschen, füllt Räume mit Klang und erinnert uns an die Farben der Seele.</p>
-        <a href="ueber-mich.html" class="btn btn--outline">Meine Geschichte lesen</a>
       </div>
     </div>
   </div>
@@ -111,17 +113,17 @@
         <div class="eyebrow">Ein besonderes Angebot</div>
         <h3>Deine persönliche Seelenmusik</h3>
         <p>Mein besonderes Angebot für dich. Du beantwortest drei Fragen, ich spüre mich ein und komponiere ein für dich individuelles Musikstück.</p>
-        <a href="seelenmusik.html" class="btn btn--primary">Mehr erfahren</a>
+        <a href="seelenmusik.html" class="btn btn--lavender">Mehr erfahren</a>
       </div>
     </div>
 
     <p style="text-align:center; margin-top: 2.5rem;">
-      <a href="angebot.html" class="btn btn--outline">Alle Angebote im Detail</a>
+      <a href="angebot.html" class="btn btn--green">Alle Angebote im Detail</a>
     </p>
   </div>
 </section>
 
-<section class="section section--alt">
+<section class="section section--alt section--hero-gradient">
   <div class="container">
     <div class="eyebrow center">Referenzen</div>
     <h2 class="section-title center">Was andere berichten</h2>
@@ -138,7 +140,7 @@
   </div>
 </section>
 
-<section class="cta-band" style="--wave-x: 0%;">
+<section class="cta-band cta-band--no-top-wave" style="--wave-x: 0%;">
   <h2>Lass uns Räume mit Klang füllen</h2>
   <p>Ob Hochzeit, Veranstaltung oder ein Moment der Ruhe — schreib mir gerne, ich freue mich auf deine Anfrage.</p>
   <a href="kontakt.html" class="btn btn--dark">Zum Kontaktformular</a>
@@ -187,6 +189,19 @@
     }
     window.addEventListener('scroll', toggleGlow, { passive: true });
     toggleGlow();
+  })();
+
+  (function () {
+    document.querySelectorAll('.photo-rotator').forEach(function (rotator) {
+      var imgs = rotator.querySelectorAll('.photo-rotator__img');
+      if (imgs.length < 2) return;
+      var i = 0;
+      setInterval(function () {
+        imgs[i].classList.remove('is-active');
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add('is-active');
+      }, 4500);
+    });
   })();
 </script>
 </body>
