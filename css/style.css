@@ -1098,7 +1098,7 @@ p.lede {
   display: inline-block;
   font-size: 1.15rem;
   padding: 1.05em 2em;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 4px 10px rgba(58, 49, 40, 0.12);
   --ty: 0px;
   transform: translateY(var(--ty));
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1211,6 +1211,9 @@ p.lede {
 }
 .cta-band--wave-top-beige::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 100' preserveAspectRatio='none'%3E%3Cpath d='M0,50 Q200,100 400,50 Q600,0 800,50 Q1000,100 1200,50 Q1400,0 1600,50 Q1800,100 2000,50 Q2200,0 2400,50 L2400,0 L0,0 Z' fill='%23efe7db'/%3E%3C/svg%3E");
+}
+.cta-band--wave-top-cream::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 100' preserveAspectRatio='none'%3E%3Cpath d='M0,50 Q200,100 400,50 Q600,0 800,50 Q1000,100 1200,50 Q1400,0 1600,50 Q1800,100 2000,50 Q2200,0 2400,50 L2400,0 L0,0 Z' fill='%23faf6f0'/%3E%3C/svg%3E");
 }
 
 .btn--dark {
