@@ -25,38 +25,43 @@
 
 <section class="section">
   <div class="container">
-    <div class="eyebrow">Kontakt</div>
     <h2 class="section-title">Ich freue mich auf deine Anfrage</h2>
     <p class="lede">Ob Hochzeit, Veranstaltung, Unterricht oder deine persönliche Seelenmusik — schreib mir gerne, ich melde mich so bald wie möglich persönlich zurück.</p>
 
-    <!--
-      TODO (Lisa): Formspark-Endpoint eintragen, sobald das Formular unter
-      https://formspark.io angelegt ist. Aktuell ist hier ein Platzhalter.
-    -->
-    <form class="form" action="https://submit-form.com/DEIN-FORMSPARK-ENDPOINT" method="POST">
-      <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
+    <div class="split" style="align-items: start; margin-top: 2.5rem;">
+      <!--
+        TODO (Lisa): Formspark-Endpoint eintragen, sobald das Formular unter
+        https://formspark.io angelegt ist. Aktuell ist hier ein Platzhalter.
+      -->
+      <form class="form" action="https://submit-form.com/DEIN-FORMSPARK-ENDPOINT" method="POST">
+        <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
 
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="Name" required>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Deine Nachricht</label>
+          <textarea id="message" name="Nachricht" required placeholder="Erzähl mir gerne, um welchen Anlass es geht, wann und wo er stattfindet, und was dir wichtig ist."></textarea>
+        </div>
+
+        <p class="form-note">Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer <a href="datenschutz.html" style="text-decoration:underline;">Datenschutzerklärung</a> zu.</p>
+
+        <div>
+          <button type="submit" class="btn btn--lavender">Nachricht senden</button>
+        </div>
+      </form>
+
+      <div class="bubble" style="margin-left: auto; max-width: 380px; background: var(--gradient-hero);">
+        <p style="color: var(--cream);">„Jeder Ton eine Farbe — jede Farbe ein Gefühl."</p>
       </div>
-
-      <div class="form-row">
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" name="Email" required>
-      </div>
-
-      <div class="form-row">
-        <label for="message">Deine Nachricht</label>
-        <textarea id="message" name="Nachricht" required placeholder="Erzähl mir gerne, um welchen Anlass es geht, wann und wo er stattfindet, und was dir wichtig ist."></textarea>
-      </div>
-
-      <p class="form-note">Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer <a href="datenschutz.html" style="text-decoration:underline;">Datenschutzerklärung</a> zu.</p>
-
-      <div>
-        <button type="submit" class="btn btn--primary">Nachricht senden</button>
-      </div>
-    </form>
+    </div>
 
     <div style="margin-top: 3rem; color: var(--text-soft); font-size: 0.95rem;">
       <p>Oder schreib mir direkt an <a href="mailto:info@christine-rojek.at" style="text-decoration:underline; color: var(--terracotta);">info@christine-rojek.at</a></p>

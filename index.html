@@ -9,8 +9,6 @@
 </head>
 <body>
 
-<img src="img/notes-glow-clef.png" alt="" aria-hidden="true" class="glow-clef glow-clef--reveal" id="homeGlowClef" style="top: 18%;">
-
 <header class="site-header">
   <a href="index.html" class="site-header__name">Christine Rojek<span>Harfenmusik</span></a>
   <nav class="site-nav">
@@ -30,7 +28,7 @@
     <img src="img/hero-forest.jpg" alt="Christine Rojek liegt mit ihrer Harfe im Wald">
   </div>
   <div class="hero-split__color">
-    <h1 class="hero-split__tagline"><span class="tagline-line">Harfenmusik,</span><span class="tagline-line tagline-line--2">die an die Farben</span><span class="tagline-line tagline-line--3">der Seelen erinnert</span></h1>
+    <h1 class="hero-split__tagline"><span class="tagline-line">Harfenmusik,</span><span class="tagline-line tagline-line--2">die an die Farben</span><span class="tagline-line tagline-line--3">der Seele erinnert</span></h1>
   </div>
   <div class="hero-split__bubble">
     <h3>Deine persönliche Seelenmusik</h3>
@@ -48,7 +46,6 @@
         <img class="photo-rotator__img" src="img/christine_rojek-316.jpg" alt="Christine Rojek">
       </div>
       <div class="split__content split__content--center">
-        <div class="eyebrow">Über mich</div>
         <h2 class="intro-title intro-title--lg">Hallo, ich bin Christine</h2>
         <p>Ich spiele seit über 30 Jahren die Harfe. Mein besonderes Herzensgebiet ist die Improvisation: Ich nehme die Atmosphäre eines Raumes und der Menschen wahr und lasse daraus im Moment Musik entstehen. Für mich ist die Harfe weit mehr als ein Instrument — sie berührt Menschen, füllt Räume mit Klang und erinnert uns an die Farben der Seele.</p>
         <a href="ueber-mich.html" class="btn btn--green">Meine Geschichte lesen <span aria-hidden="true">&#8594;</span></a>
@@ -65,8 +62,7 @@
         <span class="placeholder-note">wird bald ergänzt</span>
         <p>Ich nehme derzeit neue Aufnahmen auf — schau bald wieder vorbei oder besuch die <a href="hoerproben.html" style="text-decoration:underline;">Hörproben-Seite</a>.</p>
       </div>
-      <div class="split__content">
-        <div class="eyebrow eyebrow--feature">Auszeit</div>
+      <div class="split__content split__content--center">
         <p class="lede">Nimm dir eine kleine Auszeit, bevor du mehr über mich und mein Angebot erfährst.</p>
       </div>
     </div>
@@ -75,7 +71,6 @@
 
 <section class="section">
   <div class="container">
-    <div class="eyebrow">Angebot</div>
     <h2 class="section-title">Musik für besondere Momente</h2>
     <p class="lede">Von kleinen Hochzeiten in der Natur über Entspannungsangebote bis zu individuell komponierten Stücken — hier findest du einen Überblick.</p>
     <div class="offer-grid">
@@ -110,7 +105,6 @@
         <img src="img/playing-joy.jpg" alt="Christine Rojek spielt hingebungsvoll Harfe">
       </div>
       <div>
-        <div class="eyebrow">Ein besonderes Angebot</div>
         <h3>Deine persönliche Seelenmusik</h3>
         <p>Mein besonderes Angebot für dich. Du beantwortest drei Fragen, ich spüre mich ein und komponiere ein für dich individuelles Musikstück.</p>
         <a href="seelenmusik.html" class="btn btn--lavender">Mehr erfahren</a>
@@ -125,7 +119,6 @@
 
 <section class="section section--alt section--hero-gradient">
   <div class="container">
-    <div class="eyebrow center">Referenzen</div>
     <h2 class="section-title center">Was andere berichten</h2>
     <div class="testimonial-grid">
       <div class="testimonial">
@@ -179,18 +172,6 @@
 
 <script src="js/nav.js"></script>
 <script>
-  (function () {
-    var glow = document.getElementById('homeGlowClef');
-    var hero = document.querySelector('.hero-split');
-    if (!glow || !hero) return;
-    function toggleGlow() {
-      var heroBottom = hero.getBoundingClientRect().bottom;
-      glow.classList.toggle('is-visible', heroBottom <= window.innerHeight * 0.78);
-    }
-    window.addEventListener('scroll', toggleGlow, { passive: true });
-    toggleGlow();
-  })();
-
   (function () {
     document.querySelectorAll('.photo-rotator').forEach(function (rotator) {
       var imgs = rotator.querySelectorAll('.photo-rotator__img');
