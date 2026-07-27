@@ -75,3 +75,10 @@
   font-display: swap;
   src: url('../fonts/BarlowCondensed-400-normal.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'Domine';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/Domine-variable.woff2') format('woff2');
+}

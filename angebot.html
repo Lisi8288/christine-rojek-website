@@ -10,7 +10,7 @@
 <body>
 
 <header class="site-header">
-  <a href="index.html" class="site-header__name">Christine Rojek<span>Harfenmusik</span></a>
+  <a href="index.html" class="site-header__name"><span class="site-header__name-highlight">Christine Rojek</span></a>
   <nav class="site-nav">
     <ul class="site-nav__list">
       <li><a href="index.html">Home</a></li>
@@ -25,9 +25,14 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Zauberhafte Musik für besondere Momente</h2>
-    <p style="font-family: var(--sans); font-style: italic; font-size: 1.3rem; color: var(--terracotta); margin-bottom: 1.2rem;">Wo Worte enden, beginnt die Musik</p>
-    <p class="lede" style="max-width: none;">Jeder Moment trägt seine ganz eigene Melodie. Ich begleite deine besonderen Augenblicke mit Klängen, die berühren, den Raum öffnen und im Gedächtnis bleiben. Entdecke, wie wir deinen Anlass musikalisch zum Leben erwecken können:</p>
+    <div style="position: relative;">
+      <h2 class="section-title">Zauberhafte Musik für besondere Momente</h2>
+      <p style="font-family: var(--sans); font-style: italic; font-size: 1.3rem; color: var(--pastel-lavender-deep); margin-bottom: 1.2rem;">Wo Worte enden, beginnt die Musik</p>
+      <p class="lede" style="max-width: min(100%, 780px); padding-right: 1rem;">Jeder Moment trägt seine ganz eigene Melodie. Ich begleite deine besonderen Augenblicke mit Klängen, die berühren, den Raum öffnen und im Gedächtnis bleiben. Entdecke, wie wir deinen Anlass musikalisch zum Leben erwecken können:</p>
+      <svg viewBox="0 0 100 100" width="170" height="170" fill="none" stroke="var(--pastel-lavender-deep)" stroke-width="4" stroke-linecap="round" aria-hidden="true" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none;">
+        <path d="M70,15 C85,10 95,25 90,40 C85,60 65,75 45,68 C25,60 20,40 32,25 C42,13 60,15 65,28 C70,38 65,48 55,50 C48,51 44,46 46,42 C50,39 55,41 53,46 C51,51 45,50 43,45"/>
+      </svg>
+    </div>
 
     <div class="notenstaender">
       <button type="button" class="notenstaender__side-btn notenstaender__side-btn--prev" data-dir="-1" aria-label="Vorherige Doppelseite">&#8592;</button>
