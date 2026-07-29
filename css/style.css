@@ -830,7 +830,7 @@ p.lede {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 6vw 4% 2%;
+  padding: 4.5vw 4% 2%;
   text-align: center;
   backface-visibility: hidden;
   transform-style: preserve-3d;
@@ -866,7 +866,7 @@ p.lede {
 .notenstaender__leaf h3 {
   font-family: 'Instrument Serif', var(--serif);
   font-weight: 500;
-  font-size: clamp(1.45rem, 2.9vw, 2.1rem);
+  font-size: clamp(1.6rem, 3.15vw, 2.3rem);
   line-height: 1.2;
   color: var(--brown-deep);
   margin-bottom: 0.5em;
