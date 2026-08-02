@@ -990,7 +990,7 @@ p.lede {
   grid-template-columns: 1.1fr 1fr;
   align-items: center;
   gap: 2.5rem;
-  background: linear-gradient(135deg, #8fbf6a 0%, #d4de6e 100%);
+  background: linear-gradient(135deg, #7fb08a 0%, #bfdcc0 100%);
   border-radius: 52% 48% 47% 53% / 45% 43% 57% 55%;
   padding: clamp(4rem, 9vw, 6.5rem) clamp(4.5rem, 10vw, 8rem);
   box-shadow: var(--shadow-soft);
@@ -1056,6 +1056,84 @@ p.lede {
 .step h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
 .step p { color: var(--text-soft); font-size: 0.95rem; }
 
+/* ---------- Seelenmusik: zwei Pakete ---------- */
+.seelenmusik-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-top: 2.8rem;
+}
+.seelenmusik-option {
+  flex: 1 1 320px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--white);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  padding: 1.8rem 1.7rem;
+  box-shadow: var(--shadow-soft);
+}
+.seelenmusik-option--basic { border-color: #e6b94a; }
+.seelenmusik-option--plus { border-color: var(--pastel-lavender-deep); }
+.seelenmusik-option__price {
+  font-family: var(--sans);
+  font-style: italic;
+  font-size: 1.8rem;
+  color: var(--brown-deep);
+}
+.seelenmusik-option h3 { font-size: 1.1rem; margin: 0; }
+.seelenmusik-option p { color: var(--text-soft); font-size: 0.92rem; margin-bottom: 0.4rem; }
+.seelenmusik-option .btn { align-self: flex-start; margin-top: auto; }
+.seelenmusik-note {
+  margin-top: 1.4rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+.section--wave-lavender {
+  position: relative;
+  background: var(--pastel-lavender);
+  padding-top: clamp(5.5rem, 9vw, 8rem);
+  padding-bottom: clamp(5.5rem, 9vw, 8rem);
+}
+.section--wave-lavender::before,
+.section--wave-lavender::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 220% 100px;
+  pointer-events: none;
+}
+.section--wave-lavender::before {
+  top: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 100' preserveAspectRatio='none'%3E%3Cpath d='M0,50 Q200,100 400,50 Q600,0 800,50 Q1000,100 1200,50 Q1400,0 1600,50 Q1800,100 2000,50 Q2200,0 2400,50 L2400,0 L0,0 Z' fill='%23faf6f0'/%3E%3C/svg%3E");
+}
+.section--wave-lavender::after {
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 100' preserveAspectRatio='none'%3E%3Cpath d='M0,50 Q200,100 400,50 Q600,0 800,50 Q1000,100 1200,50 Q1400,0 1600,50 Q1800,100 2000,50 Q2200,0 2400,50 L2400,100 L0,100 Z' fill='%23faf6f0'/%3E%3C/svg%3E");
+}
+
+.seelenmusik-ablauf__heading {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--brown-deep);
+  margin: 2.8rem 0 0;
+}
+.seelenmusik-ablauf__heading--plus { color: var(--pastel-lavender-deep); }
+.steps--sm { margin-top: 1.6rem; }
+.steps--four { grid-template-columns: repeat(2, 1fr); }
+.steps--four .step:nth-child(4) {
+  border-color: #5c86a8;
+  border-radius: 44% 56% 54% 46% / 58% 42% 46% 54%;
+  margin-top: 1.5rem;
+}
+
 /* ---------- Audio-Player-Karten (Hörproben) ---------- */
 .audio-list {
   display: grid;
@@ -1108,6 +1186,9 @@ p.lede {
 }
 @media (max-width: 700px) {
   .audio-bubble-row--right { margin-left: 0; }
+}
+@media (max-width: 900px) {
+  .hoerproben-notes-accent { display: none; }
 }
 
 .fake-player {
@@ -1316,6 +1397,30 @@ p.lede {
 }
 .form-row textarea { resize: vertical; min-height: 140px; }
 .form-note { font-size: 0.85rem; color: var(--text-soft); margin-top: -0.4rem; }
+
+.package-choice { display: flex; flex-wrap: wrap; gap: 1rem; }
+.package-choice__option {
+  flex: 1 1 220px;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.2rem;
+  border: 2px solid var(--pastel-lavender);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.package-choice__option:has(input:checked) {
+  border-color: var(--pastel-lavender-deep);
+  background: var(--pastel-lavender);
+}
+.package-choice__option input {
+  accent-color: var(--pastel-lavender-deep);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.package-choice__option span { color: var(--brown); font-size: 0.95rem; }
 
 /* ---------- Footer ---------- */
 .site-footer {
