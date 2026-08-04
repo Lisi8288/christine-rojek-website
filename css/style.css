@@ -276,7 +276,7 @@ p.lede {
   letter-spacing: 1.2px;
   text-transform: uppercase;
   font-weight: 400;
-  color: var(--brown);
+  color: #000;
   position: relative;
   padding-bottom: 4px;
 }
@@ -1229,6 +1229,7 @@ p.lede {
 
 .tag-bubble {
   display: inline-block;
+  text-align: center;
   font-size: 1.15rem;
   padding: 1.05em 2em;
   box-shadow: 0 4px 10px rgba(58, 49, 40, 0.12);
@@ -1240,14 +1241,14 @@ p.lede {
   transform: translateY(calc(var(--ty) - 5px));
   box-shadow: var(--shadow-lift);
 }
-.tag-bubble:nth-child(8n+1) { border-radius: 63% 37% 54% 46% / 43% 37% 63% 57%; --ty: 8px; }
-.tag-bubble:nth-child(8n+2) { border-radius: 42% 58% 55% 45% / 55% 45% 58% 42%; --ty: -10px; }
-.tag-bubble:nth-child(8n+3) { border-radius: 55% 45% 42% 58% / 45% 58% 42% 55%; --ty: 4px; }
-.tag-bubble:nth-child(8n+4) { border-radius: 48% 52% 65% 35% / 60% 40% 55% 45%; --ty: -6px; }
-.tag-bubble:nth-child(8n+5) { border-radius: 60% 40% 45% 55% / 40% 60% 45% 55%; --ty: 10px; }
-.tag-bubble:nth-child(8n+6) { border-radius: 45% 55% 60% 40% / 55% 45% 40% 60%; --ty: -4px; }
-.tag-bubble:nth-child(8n+7) { border-radius: 58% 42% 48% 52% / 48% 58% 42% 52%; --ty: -8px; margin-top: 1.4rem; margin-left: 2.2rem; }
-.tag-bubble:nth-child(8n+8) { border-radius: 40% 60% 57% 43% / 62% 38% 52% 48%; --ty: 6px; margin-top: 1.4rem; }
+.tag-bubble:nth-child(8n+1) { border-radius: 63% 37% 54% 46% / 50% 50% 50% 50%; --ty: 8px; }
+.tag-bubble:nth-child(8n+2) { border-radius: 42% 58% 55% 45% / 50% 50% 50% 50%; --ty: -10px; }
+.tag-bubble:nth-child(8n+3) { border-radius: 55% 45% 42% 58% / 50% 50% 50% 50%; --ty: 4px; }
+.tag-bubble:nth-child(8n+4) { border-radius: 48% 52% 65% 35% / 50% 50% 50% 50%; --ty: -6px; }
+.tag-bubble:nth-child(8n+5) { border-radius: 60% 40% 45% 55% / 50% 50% 50% 50%; --ty: 10px; }
+.tag-bubble:nth-child(8n+6) { border-radius: 45% 55% 60% 40% / 50% 50% 50% 50%; --ty: -4px; }
+.tag-bubble:nth-child(8n+7) { border-radius: 58% 42% 48% 52% / 50% 50% 50% 50%; --ty: -8px; margin-top: 1.4rem; margin-left: 2.2rem; }
+.tag-bubble:nth-child(8n+8) { border-radius: 40% 60% 57% 43% / 50% 50% 50% 50%; --ty: 6px; margin-top: 1.4rem; }
 
 .video-frame {
   margin-top: 2.5rem;
