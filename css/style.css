@@ -582,6 +582,15 @@ p.lede {
     padding: 2.5rem 1.5rem;
   }
 }
+@media (max-width: 600px) {
+  .about-hero__title-line--2,
+  .about-hero__title-line--3 {
+    margin-left: 0;
+  }
+  .about-hero__content .bubble {
+    margin-left: 0;
+  }
+}
 
 .bubble {
   position: relative;
@@ -1182,6 +1191,13 @@ p.lede {
 }
 @media (max-width: 900px) {
   .hoerproben-notes-accent { display: none; }
+  .angebot-notes-accent { display: none; }
+}
+@media (max-width: 700px) {
+  .section--wave-lavender .audio-bubble-row {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
 }
 
 .fake-player {
@@ -1591,4 +1607,47 @@ p.lede {
 
 @media (max-width: 560px) {
   .image-strip { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- FAQ (Hörproben-Seite) ---------- */
+.faq-list {
+  max-width: 780px;
+  margin: 2.5rem auto 0;
+  display: grid;
+  gap: 1.1rem;
+}
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1.4rem 1.8rem;
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--brown-deep);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--terracotta);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq-item p {
+  color: var(--text-soft);
+  margin-top: 0.9rem;
+  line-height: 1.7;
 }
