@@ -85,13 +85,14 @@ h1, h2, h3, h4 {
 .section--lavender {
   background: var(--pastel-lavender);
   position: relative;
+  padding-bottom: clamp(6rem, 11vw, 9rem);
 }
 .section--lavender::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -1px;
   height: 100px;
   background-repeat: no-repeat;
   background-size: 220% 100px;
@@ -109,7 +110,7 @@ h1, h2, h3, h4 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -1px;
   height: 100px;
   background-repeat: no-repeat;
   background-size: 220% 100px;
@@ -121,12 +122,25 @@ h1, h2, h3, h4 {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: -1px;
   height: 100px;
   background-repeat: no-repeat;
   background-size: 220% 100px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 100' preserveAspectRatio='none'%3E%3Cpath d='M0,50 Q200,100 400,50 Q600,0 800,50 Q1000,100 1200,50 Q1400,0 1600,50 Q1800,100 2000,50 Q2200,0 2400,50 L2400,0 L0,0 Z' fill='%23faf6f0'/%3E%3C/svg%3E");
   pointer-events: none;
+}
+/* Über-mich Hero (nur Mobile): clip-path statt skaliertem SVG-Hintergrund, um einen sichtbaren Rasterisierungs-Saum an der Wellenkante zu vermeiden */
+@media (max-width: 767px) {
+  .section--hero-gradient.section--wave-top::before {
+    background-image: none;
+    background-color: var(--cream);
+    clip-path: polygon(0% 0%, 0.0% 50.0%, 1.83% 54.75%, 3.67% 59.0%, 5.5% 62.75%, 7.33% 66.0%, 9.17% 68.75%, 11.0% 71.0%, 12.83% 72.75%, 14.67% 74.0%, 16.5% 74.75%, 18.33% 75.0%, 20.17% 74.75%, 22.0% 74.0%, 23.83% 72.75%, 25.67% 71.0%, 27.5% 68.75%, 29.33% 66.0%, 31.17% 62.75%, 33.0% 59.0%, 34.83% 54.75%, 36.67% 50.0%, 38.5% 45.25%, 40.33% 41.0%, 42.17% 37.25%, 44.0% 34.0%, 45.83% 31.25%, 47.67% 29.0%, 49.5% 27.25%, 51.33% 26.0%, 53.17% 25.25%, 55.0% 25.0%, 56.83% 25.25%, 58.67% 26.0%, 60.5% 27.25%, 62.33% 29.0%, 64.17% 31.25%, 66.0% 34.0%, 67.83% 37.25%, 69.67% 41.0%, 71.5% 45.25%, 73.33% 50.0%, 75.17% 54.75%, 77.0% 59.0%, 78.83% 62.75%, 80.67% 66.0%, 82.5% 68.75%, 84.33% 71.0%, 86.17% 72.75%, 88.0% 74.0%, 89.83% 74.75%, 91.67% 75.0%, 93.5% 74.75%, 95.33% 74.0%, 97.17% 72.75%, 99.0% 71.0%, 100% 0%);
+  }
+  .section--hero-gradient.section--wave-top::after {
+    background-image: none;
+    background-color: var(--cream);
+    clip-path: polygon(0% 100%, 0.0% 50.0%, 1.83% 54.75%, 3.67% 59.0%, 5.5% 62.75%, 7.33% 66.0%, 9.17% 68.75%, 11.0% 71.0%, 12.83% 72.75%, 14.67% 74.0%, 16.5% 74.75%, 18.33% 75.0%, 20.17% 74.75%, 22.0% 74.0%, 23.83% 72.75%, 25.67% 71.0%, 27.5% 68.75%, 29.33% 66.0%, 31.17% 62.75%, 33.0% 59.0%, 34.83% 54.75%, 36.67% 50.0%, 38.5% 45.25%, 40.33% 41.0%, 42.17% 37.25%, 44.0% 34.0%, 45.83% 31.25%, 47.67% 29.0%, 49.5% 27.25%, 51.33% 26.0%, 53.17% 25.25%, 55.0% 25.0%, 56.83% 25.25%, 58.67% 26.0%, 60.5% 27.25%, 62.33% 29.0%, 64.17% 31.25%, 66.0% 34.0%, 67.83% 37.25%, 69.67% 41.0%, 71.5% 45.25%, 73.33% 50.0%, 75.17% 54.75%, 77.0% 59.0%, 78.83% 62.75%, 80.67% 66.0%, 82.5% 68.75%, 84.33% 71.0%, 86.17% 72.75%, 88.0% 74.0%, 89.83% 74.75%, 91.67% 75.0%, 93.5% 74.75%, 95.33% 74.0%, 97.17% 72.75%, 99.0% 71.0%, 100% 100%);
+  }
 }
 
 .eyebrow {
@@ -410,6 +424,20 @@ p.lede {
   max-width: 700px;
   box-shadow: var(--shadow-lift);
   text-align: center;
+}
+@media (max-width: 600px) {
+  .hero-split__bubble {
+    max-width: 300px;
+    border-radius: 50%;
+    padding: 4.2rem 2.4rem 4.6rem;
+  }
+  .hero-split__bubble p {
+    font-size: 0.88rem;
+  }
+  .hero-split__bubble-btn {
+    font-size: 0.74rem;
+    padding: 0.75em 1.3em;
+  }
 }
 .hero-split__bubble h3 {
   font-family: 'Instrument Serif', var(--serif);
@@ -962,22 +990,24 @@ p.lede {
   }
   .notenstaender__stage.is-right .notenstaender__bg { object-position: 86% 50%; }
   .notenstaender__page {
-    top: 17%;
-    height: 46%;
+    top: 23.5%;
+    height: 34%;
   }
   .notenstaender__page--left {
-    left: 25.3%;
-    width: 49.5%;
+    left: 38.7%;
+    width: 40.5%;
   }
   .notenstaender__page--right { display: none; }
   .notenstaender__stage.is-right .notenstaender__page--left { display: none; }
   .notenstaender__stage.is-right .notenstaender__page--right {
     display: block;
-    left: 31.7%;
-    width: 36.5%;
+    left: 15.2%;
+    width: 44%;
   }
-  .notenstaender__leaf h3 { font-size: 1.05rem; }
-  .notenstaender__leaf p { font-size: 0.92rem; }
+  .notenstaender__leaf h3 { font-size: 1.05rem; text-shadow: 0 1px 12px rgba(250, 246, 240, 0.9), 0 1px 3px rgba(250, 246, 240, 0.9); }
+  .notenstaender__leaf p { font-size: 0.92rem; text-shadow: 0 1px 10px rgba(250, 246, 240, 0.9), 0 1px 2px rgba(250, 246, 240, 0.9); }
+  .notenstaender__side-btn--prev { left: 1.2rem; }
+  .notenstaender__side-btn--next { right: 1.2rem; }
 }
 
 .offer-not {
@@ -1003,6 +1033,13 @@ p.lede {
   border-radius: 52% 48% 47% 53% / 45% 43% 57% 55%;
   padding: clamp(4rem, 9vw, 6.5rem) clamp(4.5rem, 10vw, 8rem);
   box-shadow: var(--shadow-soft);
+}
+@media (max-width: 600px) {
+  .soulmusic-card {
+    border-radius: 60px 30px 60px 30px / 30px 60px 30px 60px;
+    padding: 2.8rem 2.1rem;
+    overflow: hidden;
+  }
 }
 .soulmusic-card h3 {
   font-size: clamp(1.5rem, 2.3vw, 2.1rem);
@@ -1113,11 +1150,11 @@ p.lede {
   pointer-events: none;
 }
 .section--wave-lavender::before {
-  top: 0;
+  top: -1px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 100' preserveAspectRatio='none'%3E%3Cpath d='M0,50 Q200,100 400,50 Q600,0 800,50 Q1000,100 1200,50 Q1400,0 1600,50 Q1800,100 2000,50 Q2200,0 2400,50 L2400,0 L0,0 Z' fill='%23faf6f0'/%3E%3C/svg%3E");
 }
 .section--wave-lavender::after {
-  bottom: 0;
+  bottom: -1px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 100' preserveAspectRatio='none'%3E%3Cpath d='M0,50 Q200,100 400,50 Q600,0 800,50 Q1000,100 1200,50 Q1400,0 1600,50 Q1800,100 2000,50 Q2200,0 2400,50 L2400,100 L0,100 Z' fill='%23faf6f0'/%3E%3C/svg%3E");
 }
 
@@ -1337,12 +1374,24 @@ p.lede {
   pointer-events: none;
 }
 .cta-band::before {
-  top: 0;
+  top: -1px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 100' preserveAspectRatio='none'%3E%3Cpath d='M0,50 Q200,100 400,50 Q600,0 800,50 Q1000,100 1200,50 Q1400,0 1600,50 Q1800,100 2000,50 Q2200,0 2400,50 L2400,0 L0,0 Z' fill='%23faf6f0'/%3E%3C/svg%3E");
 }
 .cta-band::after {
-  bottom: 0;
+  bottom: -1px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 100' preserveAspectRatio='none'%3E%3Cpath d='M0,50 Q200,100 400,50 Q600,0 800,50 Q1000,100 1200,50 Q1400,0 1600,50 Q1800,100 2000,50 Q2200,0 2400,50 L2400,100 L0,100 Z' fill='%23faf6f0'/%3E%3C/svg%3E");
+}
+@media (max-width: 767px) {
+  .cta-band::before {
+    background-image: none;
+    background-color: var(--cream);
+    clip-path: polygon(0% 0%, 0.0% 50.0%, 1.83% 54.75%, 3.67% 59.0%, 5.5% 62.75%, 7.33% 66.0%, 9.17% 68.75%, 11.0% 71.0%, 12.83% 72.75%, 14.67% 74.0%, 16.5% 74.75%, 18.33% 75.0%, 20.17% 74.75%, 22.0% 74.0%, 23.83% 72.75%, 25.67% 71.0%, 27.5% 68.75%, 29.33% 66.0%, 31.17% 62.75%, 33.0% 59.0%, 34.83% 54.75%, 36.67% 50.0%, 38.5% 45.25%, 40.33% 41.0%, 42.17% 37.25%, 44.0% 34.0%, 45.83% 31.25%, 47.67% 29.0%, 49.5% 27.25%, 51.33% 26.0%, 53.17% 25.25%, 55.0% 25.0%, 56.83% 25.25%, 58.67% 26.0%, 60.5% 27.25%, 62.33% 29.0%, 64.17% 31.25%, 66.0% 34.0%, 67.83% 37.25%, 69.67% 41.0%, 71.5% 45.25%, 73.33% 50.0%, 75.17% 54.75%, 77.0% 59.0%, 78.83% 62.75%, 80.67% 66.0%, 82.5% 68.75%, 84.33% 71.0%, 86.17% 72.75%, 88.0% 74.0%, 89.83% 74.75%, 91.67% 75.0%, 93.5% 74.75%, 95.33% 74.0%, 97.17% 72.75%, 99.0% 71.0%, 100% 0%);
+  }
+  .cta-band::after {
+    background-image: none;
+    background-color: var(--cream);
+    clip-path: polygon(0% 100%, 0.0% 50.0%, 1.83% 54.75%, 3.67% 59.0%, 5.5% 62.75%, 7.33% 66.0%, 9.17% 68.75%, 11.0% 71.0%, 12.83% 72.75%, 14.67% 74.0%, 16.5% 74.75%, 18.33% 75.0%, 20.17% 74.75%, 22.0% 74.0%, 23.83% 72.75%, 25.67% 71.0%, 27.5% 68.75%, 29.33% 66.0%, 31.17% 62.75%, 33.0% 59.0%, 34.83% 54.75%, 36.67% 50.0%, 38.5% 45.25%, 40.33% 41.0%, 42.17% 37.25%, 44.0% 34.0%, 45.83% 31.25%, 47.67% 29.0%, 49.5% 27.25%, 51.33% 26.0%, 53.17% 25.25%, 55.0% 25.0%, 56.83% 25.25%, 58.67% 26.0%, 60.5% 27.25%, 62.33% 29.0%, 64.17% 31.25%, 66.0% 34.0%, 67.83% 37.25%, 69.67% 41.0%, 71.5% 45.25%, 73.33% 50.0%, 75.17% 54.75%, 77.0% 59.0%, 78.83% 62.75%, 80.67% 66.0%, 82.5% 68.75%, 84.33% 71.0%, 86.17% 72.75%, 88.0% 74.0%, 89.83% 74.75%, 91.67% 75.0%, 93.5% 74.75%, 95.33% 74.0%, 97.17% 72.75%, 99.0% 71.0%, 100% 100%);
+  }
 }
 .cta-band--no-top-wave {
   background: var(--cream);
@@ -1607,6 +1656,20 @@ p.lede {
 
 @media (max-width: 560px) {
   .image-strip { grid-template-columns: 1fr 1fr; }
+  .image-strip__item:nth-child(3):last-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 600px) {
+  .section--hero-gradient::after,
+  .section--wave-top::before,
+  .cta-band::before,
+  .cta-band::after {
+    height: 60px;
+    background-size: 220% 60px;
+  }
 }
 
 /* ---------- FAQ (Hörproben-Seite) ---------- */
