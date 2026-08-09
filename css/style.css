@@ -428,6 +428,7 @@ p.lede {
 @media (max-width: 600px) {
   .hero-split__bubble {
     max-width: none;
+    margin: -3rem 1.1rem 1.6rem;
     border-radius: 24px;
     padding: 2rem 1.8rem;
   }
@@ -725,10 +726,10 @@ p.lede {
   .offer-grid { grid-template-columns: 1fr; justify-items: center; }
   .offer-grid .offer-card {
     max-width: 240px;
-    padding: 1.6rem 1.6rem;
+    padding: 1.7rem 1.7rem;
   }
-  .offer-card h3 { font-size: 1.1rem; }
-  .offer-card p { font-size: 0.88rem; }
+  .offer-card h3 { font-size: 1.1rem; margin-top: 0.4rem; }
+  .offer-card p { font-size: 0.85rem; letter-spacing: -0.01em; }
 }
 
 .offer-carousel {
