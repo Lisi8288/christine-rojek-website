@@ -403,7 +403,7 @@ p.lede {
     padding: 3rem 1.5rem;
   }
   .hero-split__tagline {
-    font-size: clamp(2.1rem, 7vw, 2.8rem);
+    font-size: clamp(2.3rem, 7.5vw, 3rem);
   }
   .tagline-line--2 {
     margin-left: 0.8em;
@@ -428,7 +428,7 @@ p.lede {
 @media (max-width: 600px) {
   .hero-split__bubble {
     max-width: none;
-    margin: -3rem 1.1rem 1.6rem;
+    margin: -1.4rem 1.1rem 2.4rem;
     border-radius: 24px;
     padding: 2rem 1.8rem;
   }
