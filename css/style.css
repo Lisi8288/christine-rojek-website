@@ -1610,8 +1610,7 @@ p.lede {
   margin-right: auto;
 }
 .bio-text p {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
   hyphens: none;
   position: relative;
   z-index: 1;
