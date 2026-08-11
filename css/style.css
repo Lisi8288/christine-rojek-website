@@ -725,11 +725,11 @@ p.lede {
 @media (max-width: 600px) {
   .offer-grid { grid-template-columns: 1fr; justify-items: center; }
   .offer-grid .offer-card {
-    max-width: 240px;
-    padding: 1.7rem 1.7rem;
+    max-width: 250px;
+    padding: 2rem 1.9rem;
   }
-  .offer-card h3 { font-size: 1.1rem; margin-top: 0.4rem; }
-  .offer-card p { font-size: 0.85rem; letter-spacing: -0.01em; }
+  .offer-card h3 { font-size: 1.02rem; margin-top: 0.3rem; }
+  .offer-card p { font-size: 0.8rem; letter-spacing: -0.01em; }
 }
 
 .offer-carousel {
@@ -1300,6 +1300,17 @@ p.lede {
   .section--wave-lavender .audio-bubble-row {
     margin: 0 !important;
     max-width: 100% !important;
+  }
+  .audio-bubble-row .audio-card--soft p {
+    font-size: 0.74rem;
+    letter-spacing: -0.015em;
+    line-height: 1.35;
+  }
+  .audio-bubble-row .audio-card--soft {
+    padding-left: clamp(3rem, 10vw, 5rem);
+    padding-right: clamp(3rem, 10vw, 5rem);
+    padding-top: clamp(2.6rem, 7vw, 3.6rem);
+    padding-bottom: clamp(2.6rem, 7vw, 3.6rem);
   }
 }
 
