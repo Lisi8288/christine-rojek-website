@@ -1625,7 +1625,8 @@ p.lede {
   margin-right: auto;
 }
 .bio-text p {
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
   hyphens: none;
   position: relative;
   z-index: 1;
@@ -1689,6 +1690,7 @@ p.lede {
 }
 @media (max-width: 700px) {
   .bio-text__decoration { display: none; }
+  .bio-text p { text-align: left; }
 }
 .deco-note {
   position: absolute;
