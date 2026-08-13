@@ -428,7 +428,7 @@ p.lede {
 @media (max-width: 600px) {
   .hero-split__bubble {
     max-width: none;
-    margin: -1.4rem 1.1rem 2.4rem;
+    margin: 0.8rem 1.1rem 2.4rem;
     border-radius: 24px;
     padding: 2rem 1.8rem;
   }
@@ -1097,54 +1097,94 @@ p.lede {
   order: -1;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 2.6rem;
+}
+@media (max-width: 900px) {
+  .home-offer-flex {
+    margin-top: 2.2rem;
+  }
+}
+.home-offer-flex .soulmusic-wrap .soulmusic-card {
+  margin-top: 0;
 }
 .soulmusic-card.soulmusic-card--yellow {
-  background: linear-gradient(135deg, #f7e08a 0%, #f0c96b 100%);
+  background: linear-gradient(135deg, #f2eeae 0%, #ece49a 100%);
 }
 @media (min-width: 901px) {
+  .section-title--offers {
+    text-align: center;
+  }
   .home-offer-flex .soulmusic-wrap {
     order: 1;
     margin-top: 3.5rem;
     gap: 0;
   }
   .home-offer-flex .soulmusic-wrap .soulmusic-card {
-    width: 92%;
+    width: 76%;
     margin-top: 0;
     margin-left: 0;
     margin-right: auto;
     align-self: auto;
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    border-radius: 50%;
+    padding: 7.5% 14% 8.5% 14%;
   }
   .home-offer-flex .soulmusic-wrap .soulmusic-card--yellow {
-    width: 92%;
-    margin-top: -3rem;
+    width: 76%;
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: 0;
     align-self: auto;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    border-radius: 50%;
+    padding: 7.5% 11% 8.5% 14%;
+  }
+  .home-offer-flex .soulmusic-wrap .soulmusic-card {
+    gap: 1.4rem 0.8rem;
   }
   .home-offer-flex .soulmusic-wrap .soulmusic-card__heading {
     grid-column: 1 / -1;
     grid-row: 1;
     white-space: normal;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
+    font-size: clamp(1.65rem, 2.2vw, 2.1rem);
+    text-align: center;
   }
   .home-offer-flex .soulmusic-wrap .soulmusic-card__media {
     grid-row: 2;
+    grid-column: 1;
   }
-  .home-offer-flex .soulmusic-wrap .soulmusic-card > div:last-child {
+  .home-offer-flex .soulmusic-wrap .soulmusic-card__text {
     grid-row: 2;
+    grid-column: 2;
+  }
+  .home-offer-flex .soulmusic-wrap .soulmusic-card p {
+    margin-bottom: 0.8rem;
+    line-height: 1.45;
+  }
+  .home-offer-flex .soulmusic-wrap .soulmusic-card .btn {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    justify-self: center;
+    font-size: 0.78rem;
+    padding: 0.65em 1.7em;
+  }
+  .home-offer-flex .soulmusic-wrap .soulmusic-card--yellow .soulmusic-card__media {
+    grid-column: 2;
+  }
+  .home-offer-flex .soulmusic-wrap .soulmusic-card--yellow .soulmusic-card__text {
+    grid-column: 1;
   }
 }
-
 .soulmusic-card {
   margin-top: 3.5rem;
   display: grid;
   grid-template-columns: 1.35fr 1fr;
   align-items: center;
   gap: 2.5rem;
-  background: linear-gradient(135deg, #7fb08a 0%, #bfdcc0 100%);
+  background: linear-gradient(135deg, #6fa47a 0%, #a3cc9f 100%);
   border-radius: 52% 48% 47% 53% / 45% 43% 57% 55%;
   padding: clamp(4rem, 9vw, 6.5rem) clamp(4.5rem, 10vw, 8rem);
   box-shadow: var(--shadow-soft);
@@ -1432,6 +1472,15 @@ p.lede {
 .tag-bubble:nth-child(8n+6) { border-radius: 45% 55% 60% 40% / 50% 50% 50% 50%; --ty: -4px; }
 .tag-bubble:nth-child(8n+7) { border-radius: 58% 42% 48% 52% / 50% 50% 50% 50%; --ty: -8px; margin-top: 1.4rem; margin-left: 2.2rem; }
 .tag-bubble:nth-child(8n+8) { border-radius: 40% 60% 57% 43% / 50% 50% 50% 50%; --ty: 6px; margin-top: 1.4rem; }
+
+.video-embed {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+.video-embed .instagram-media {
+  margin: 0 auto !important;
+}
 
 .video-frame {
   margin-top: 2.5rem;
