@@ -1118,29 +1118,29 @@ p.lede {
   .home-offer-flex .soulmusic-wrap {
     order: 1;
     margin-top: 3.5rem;
-    gap: 1.6rem;
-    margin-left: calc(-50vw + 50% + 38px);
-    width: calc(100vw - 76px);
+    gap: 1.2rem;
+    margin-left: calc(-50vw + 50% + 57px);
+    width: calc(100vw - 114px);
   }
   .home-offer-flex .soulmusic-wrap .soulmusic-card {
     display: flex;
-    width: 62vw;
+    width: 58vw;
     margin-top: 0;
     margin-left: 0;
     margin-right: auto;
     align-self: auto;
     align-items: center;
     border-radius: 50%;
-    padding: 5% 11% 5% 8%;
+    padding: 6.5% 11% 6.5% 8%;
   }
   .home-offer-flex .soulmusic-wrap .soulmusic-card--yellow {
-    width: 62vw;
+    width: 58vw;
     margin-top: 0;
     margin-left: auto;
     margin-right: 0;
     align-self: auto;
     border-radius: 50%;
-    padding: 5% 11% 5% 8%;
+    padding: 6.5% 11% 6.5% 8%;
   }
   .home-offer-flex .soulmusic-wrap .soulmusic-card {
     gap: 2rem;
@@ -1148,11 +1148,11 @@ p.lede {
   .home-offer-flex .soulmusic-wrap .soulmusic-card__heading {
     white-space: normal;
     margin-bottom: 0.6rem;
-    font-size: clamp(1.6rem, 2.1vw, 2.1rem);
+    font-size: clamp(1.4rem, 1.85vw, 1.9rem);
     text-align: left;
   }
   .home-offer-flex .soulmusic-wrap .soulmusic-card__media {
-    flex: 0 0 40%;
+    flex: 0 0 44%;
   }
   .home-offer-flex .soulmusic-wrap .soulmusic-card__content {
     flex: 1 1 auto;
