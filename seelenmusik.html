@@ -6,6 +6,7 @@
 <title>Deine persönliche Seelenmusik – Christine Rojek</title>
 <meta name="description" content="Ein individuell komponiertes Musikstück, nur für dich – zum Zuhören, Liegen und Nachspüren.">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/cookie-banner.js"></script>
 </head>
 <body>
 
@@ -105,11 +106,7 @@
     <h2 class="section-title">Deine drei Fragen</h2>
     <p class="lede">Beantworte mir die folgenden drei Fragen – das gibt mir einen ersten Einblick, bevor ich mich in dich einspüre. Wähle vorab dein Paket, die Rechnung bekommst du nach der Buchung persönlich von mir per E-Mail.</p>
 
-    <!--
-      TODO (Lisa): Formspark-Endpoint eintragen, sobald das Formular unter
-      https://formspark.io angelegt ist. Aktuell ist hier ein Platzhalter.
-    -->
-    <form class="form" action="https://submit-form.com/DEIN-FORMSPARK-ENDPOINT" method="POST">
+    <form class="form" action="https://submit-form.com/7ls05qIWC" method="POST">
       <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
 
       <div class="form-row">
@@ -153,6 +150,8 @@
 
       <p class="form-note">Mit dem Absenden buchst du dein persönliches Musikstück verbindlich (50€ bzw. 100€, je nach gewähltem Paket) und stimmst der Verarbeitung deiner Daten gemäß unserer <a href="datenschutz.html" style="text-decoration:underline;">Datenschutzerklärung</a> zu. Die Zahlung läuft nicht über die Website – du erhältst die Rechnung persönlich per E-Mail.</p>
 
+      <p class="form-status" role="status" aria-live="polite"></p>
+
       <div>
         <button type="submit" class="btn btn--lavender">Jetzt buchen</button>
       </div>
@@ -188,6 +187,7 @@
           <li><a href="mailto:info@christine-rojek.at">info@christine-rojek.at</a></li>
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="#" id="cookie-settings">Cookie-Einstellungen</a></li>
         </ul>
       </nav>
     </div>
@@ -199,6 +199,7 @@
 </footer>
 
 <script src="js/nav.js"></script>
+<script src="js/contact-form.js"></script>
 <script>
   document.querySelectorAll('[data-pkg]').forEach(function (btn) {
     btn.addEventListener('click', function () {

@@ -6,6 +6,7 @@
 <title>Hörproben – Christine Rojek</title>
 <meta name="description" content="Hörproben und Videos der Harfenistin Christine Rojek – bald verfügbar.">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/cookie-banner.js"></script>
 </head>
 <body>
 
@@ -83,13 +84,17 @@
   <div class="container">
     <h2 class="section-title">Erlebe mich live</h2>
     <p class="lede">Ein kurzer Eindruck aus einer Yogastunde – folge mir gerne und entdecke mehr von meiner Harfenmusik.</p>
-    <div class="video-embed">
-      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DaiR5ZFo64O/" data-instgrm-version="14">
-        <a href="https://www.instagram.com/reel/DaiR5ZFo64O/" target="_blank" rel="noopener">Video auf Instagram ansehen</a>
-      </blockquote>
+    <div class="video-embed" id="embed-instagram" data-embed="instagram">
+      <div class="embed-placeholder">
+        <p>Dieses Video wird von Instagram geladen. Dabei werden Daten an Meta (USA) übertragen.</p>
+        <button type="button" class="btn btn--lavender embed-load-btn">Video laden</button>
+      </div>
     </div>
-    <div class="video-frame" style="max-width: 900px; margin-top: 2rem;">
-      <iframe src="https://www.youtube-nocookie.com/embed/y3pWorJQ7ZE" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; height:100%; border:0;"></iframe>
+    <div class="video-frame" id="embed-youtube" data-embed="youtube" style="max-width: 900px; margin-top: 2rem;">
+      <div class="embed-placeholder">
+        <p>Dieses Video wird von YouTube geladen. Dabei werden Daten an Google (USA) übertragen.</p>
+        <button type="button" class="btn btn--lavender embed-load-btn">Video laden</button>
+      </div>
     </div>
   </div>
 </section>
@@ -150,6 +155,7 @@
           <li><a href="mailto:info@christine-rojek.at">info@christine-rojek.at</a></li>
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="#" id="cookie-settings">Cookie-Einstellungen</a></li>
         </ul>
       </nav>
     </div>
@@ -161,6 +167,6 @@
 </footer>
 
 <script src="js/nav.js"></script>
-<script async src="//www.instagram.com/embed.js"></script>
+<script src="js/embed-consent.js"></script>
 </body>
 </html>
