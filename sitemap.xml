@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://christine-rojek.at/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://christine-rojek.at/ueber-mich.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://christine-rojek.at/hoerproben.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://christine-rojek.at/angebot.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://christine-rojek.at/seelenmusik.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://christine-rojek.at/kontakt.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://christine-rojek.at/impressum.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://christine-rojek.at/datenschutz.html</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>

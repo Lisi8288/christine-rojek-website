@@ -162,6 +162,7 @@ h1, h2, h3, h4 {
   margin-bottom: 1.3rem;
 }
 
+h1.section-title,
 h2.section-title {
   font-size: clamp(1.9rem, 3.5vw, 2.7rem);
   margin-bottom: 1.1rem;
