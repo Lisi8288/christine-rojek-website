@@ -259,6 +259,13 @@ p.lede {
   color: var(--terracotta);
   margin-top: 3px;
 }
+.site-header__name .site-header__jobtitle {
+  display: inline;
+  margin-top: 0;
+  margin-left: 0.6em;
+  font-size: 0.85rem;
+  vertical-align: middle;
+}
 .site-header__name .site-header__name-highlight {
   display: inline;
   font-family: 'Instrument Serif', var(--serif);
@@ -372,6 +379,14 @@ p.lede {
 }
 .tagline-line--3 {
   margin-left: 2.8em;
+}
+.hero-split__subline {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  color: var(--text-soft);
+  margin-top: 0.9rem;
+  max-width: 460px;
 }
 .hero-split__media {
   position: relative;
