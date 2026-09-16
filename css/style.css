@@ -1555,6 +1555,24 @@ p.lede {
 }
 .testimonial cite a { text-decoration: underline; }
 
+@media (min-width: 768px) {
+  .testimonial-viewport {
+    overflow: hidden;
+  }
+  .testimonial-grid {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .testimonial-grid .testimonial {
+    flex: 0 0 calc(50% - 0.8rem);
+  }
+}
+@media (max-width: 767px) {
+  .testimonial--clone {
+    display: none;
+  }
+}
+
 /* ---------- CTA-Band ---------- */
 .cta-band {
   position: relative;

@@ -7,6 +7,13 @@
         '</blockquote>';
       loadInstagramScript();
     },
+    instagram2: function (container) {
+      container.innerHTML =
+        '<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DdTrgViI5J8/" data-instgrm-version="14">' +
+          '<a href="https://www.instagram.com/reel/DdTrgViI5J8/" target="_blank" rel="noopener">Video auf Instagram ansehen</a>' +
+        '</blockquote>';
+      loadInstagramScript();
+    },
     youtube: function (container) {
       container.innerHTML =
         '<iframe src="https://www.youtube-nocookie.com/embed/y3pWorJQ7ZE" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; height:100%; border:0;"></iframe>';

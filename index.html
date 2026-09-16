@@ -167,14 +167,20 @@
 <section class="section section--alt section--hero-gradient">
   <div class="container">
     <h2 class="section-title center">Was andere berichten</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial">
-        <p class="quote">„Ihre Klänge haben nicht nur mich, sondern auch die Teilnehmerinnen bezaubert und in eine andere Welt begleitet."</p>
-        <cite>Elisabeth Cartellieri – Shiatsupraxis für Frauengesundheit, Graz</cite>
-      </div>
-      <div class="testimonial">
-        <p class="quote">„Mit Gefühl und Achtsamkeit nahm sie uns in ein weiches und auf seine zarte Art dennoch kraftvolles und schwingendes Klangfeld."</p>
-        <cite>Ursula Kröpfl – Shiatsu Gleisdorf</cite>
+    <div class="testimonial-viewport">
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p class="quote">„Ihre Klänge haben nicht nur mich, sondern auch die Teilnehmerinnen bezaubert und in eine andere Welt begleitet."</p>
+          <cite>Elisabeth Cartellieri – Shiatsupraxis für Frauengesundheit, Graz</cite>
+        </div>
+        <div class="testimonial">
+          <p class="quote">„Mit Gefühl und Achtsamkeit nahm sie uns in ein weiches und auf seine zarte Art dennoch kraftvolles und schwingendes Klangfeld."</p>
+          <cite>Ursula Kröpfl – Shiatsu Gleisdorf</cite>
+        </div>
+        <div class="testimonial">
+          <p class="quote">„Ihre warmen, feinfühligen Klänge haben unsere Yogaeinheiten und Klangreisen auf besondere Weise bereichert und Momente voller Ruhe, Verbundenheit und Schönheit geschaffen, die noch lange nachklingen."</p>
+          <cite>Andreas Vecsei – Mangalam Yoga</cite>
+        </div>
       </div>
     </div>
   </div>
@@ -232,6 +238,37 @@
         imgs[i].classList.add('is-active');
       }, 4500);
     });
+  })();
+
+  (function () {
+    var viewport = document.querySelector('.testimonial-viewport');
+    if (!viewport) return;
+    var track = viewport.querySelector('.testimonial-grid');
+    var cards = Array.prototype.slice.call(track.children);
+    if (!window.matchMedia('(min-width: 768px)').matches || cards.length < 3) return;
+
+    var clone = cards[0].cloneNode(true);
+    clone.classList.add('testimonial--clone');
+    track.appendChild(clone);
+
+    var total = cards.length;
+    var index = 0;
+
+    setInterval(function () {
+      index++;
+      var gap = parseFloat(getComputedStyle(track).gap) || 0;
+      var step = cards[0].getBoundingClientRect().width + gap;
+      track.style.transition = 'transform 0.7s ease';
+      track.style.transform = 'translateX(-' + (step * index) + 'px)';
+
+      if (index === total) {
+        setTimeout(function () {
+          track.style.transition = 'none';
+          track.style.transform = 'translateX(0)';
+          index = 0;
+        }, 700);
+      }
+    }, 4500);
   })();
 </script>
 </body>
