@@ -1480,10 +1480,34 @@ p.lede {
 .tag-bubble:nth-child(8n+7) { border-radius: 58% 42% 48% 52% / 50% 50% 50% 50%; --ty: -8px; margin-top: 1.4rem; margin-left: 2.2rem; }
 .tag-bubble:nth-child(8n+8) { border-radius: 40% 60% 57% 43% / 50% 50% 50% 50%; --ty: 6px; margin-top: 1.4rem; }
 
+.video-embed-row {
+  margin-top: 2.5rem;
+}
 .video-embed {
   margin-top: 2.5rem;
   display: flex;
   justify-content: center;
+}
+.video-embed-row .video-embed {
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  .video-embed-row .video-embed:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .video-embed-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+  .video-embed-row .video-embed {
+    flex: 0 1 460px;
+    margin-top: 0;
+  }
 }
 .video-embed .instagram-media {
   margin: 0 auto !important;
