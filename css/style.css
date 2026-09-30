@@ -1293,6 +1293,44 @@ p.lede {
 }
 .seelenmusik-option h3 { font-size: 1.1rem; margin: 0; }
 .seelenmusik-option p { color: var(--text-soft); font-size: 0.92rem; margin-bottom: 0.4rem; }
+.seelenmusik-option ul {
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+.seelenmusik-option li { margin-bottom: 0.6rem; }
+
+.anlass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.6rem;
+  margin-top: 2.5rem;
+}
+.anlass-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.9rem;
+  box-shadow: var(--shadow-soft);
+}
+.anlass-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+  font-style: italic;
+  text-align: center;
+}
+.anlass-card ul {
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: var(--brown);
+  font-size: 0.92rem;
+}
+.anlass-card li { margin-bottom: 0.6rem; }
+.anlass-card li:last-child { margin-bottom: 0; }
+.anlass-card strong { color: var(--brown-deep); font-weight: 500; }
+.anlass-card:nth-child(1) { background: var(--gradient-sunset); }
+.anlass-card:nth-child(2) { background: var(--gradient-hero); }
+.anlass-card:nth-child(3) { background: linear-gradient(135deg, #8fbf6a 0%, #d4de6e 100%); }
 .seelenmusik-option .btn { align-self: flex-start; margin-top: auto; }
 .section--wave-lavender {
   position: relative;
