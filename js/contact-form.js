@@ -27,6 +27,14 @@
       .then(function (res) {
         if (!res.ok) throw new Error('Formspark request failed');
         form.reset();
+        var thanks = form.dataset.thanks && document.getElementById(form.dataset.thanks);
+        if (thanks) {
+          form.hidden = true;
+          thanks.hidden = false;
+          thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          thanks.focus({ preventScroll: true });
+          return;
+        }
         if (status) {
           status.textContent = 'Danke für deine Nachricht! Ich melde mich so bald wie möglich persönlich bei dir.';
           status.classList.add('form-status--success');

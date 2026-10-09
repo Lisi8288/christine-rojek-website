@@ -1773,6 +1773,22 @@ p.lede {
 .form-status--success { background: var(--gradient-sage); color: var(--brown-deep); }
 .form-status--error { background: var(--pastel-rose); color: var(--brown-deep); }
 
+.form[hidden],
+.form-thanks[hidden] { display: none; }
+.form-thanks {
+  max-width: 640px;
+  margin-top: 2rem;
+  padding: clamp(1.8rem, 4vw, 2.6rem);
+  border-radius: var(--radius);
+  background: var(--gradient-sage);
+  color: var(--brown-deep);
+  box-shadow: var(--shadow-soft);
+  outline: none;
+}
+.form-thanks h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 1rem; }
+.form-thanks p { color: var(--brown-deep); margin-bottom: 0.8rem; }
+.form-thanks p:last-child { margin-bottom: 0; }
+
 .package-choice { display: flex; flex-wrap: wrap; gap: 1rem; }
 .package-choice__option {
   flex: 1 1 220px;
