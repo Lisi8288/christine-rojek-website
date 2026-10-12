@@ -1738,6 +1738,11 @@ p.lede {
   margin-top: 2rem;
 }
 .form-row { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-row-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.3rem;
+}
 .form-row label {
   font-size: 0.8rem;
   letter-spacing: 1px;

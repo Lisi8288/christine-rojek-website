@@ -149,9 +149,15 @@
         </div>
       </div>
 
-      <div class="form-row">
-        <label for="sm-name">Name</label>
-        <input type="text" id="sm-name" name="Name" required>
+      <div class="form-row-pair">
+        <div class="form-row">
+          <label for="sm-vorname">Vorname</label>
+          <input type="text" id="sm-vorname" name="Vorname" autocomplete="given-name" required>
+        </div>
+        <div class="form-row">
+          <label for="sm-nachname">Nachname</label>
+          <input type="text" id="sm-nachname" name="Nachname" autocomplete="family-name" required>
+        </div>
       </div>
 
       <div class="form-row">
@@ -172,6 +178,11 @@
       <div class="form-row">
         <label for="sm-frage3">Wie möchtest du dich in der Zukunft fühlen? Was ist deine Vision?</label>
         <textarea id="sm-frage3" name="Frage 3"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="sm-quelle">Wie bist du auf mich aufmerksam geworden? (optional)</label>
+        <input type="text" id="sm-quelle" name="Aufmerksam geworden durch" placeholder="z. B. Instagram, Empfehlung, Google, Veranstaltung …">
       </div>
 
       <p class="form-note">Mit dem Absenden buchst du dein persönliches Musikstück verbindlich (50€ bzw. 100€, je nach gewähltem Paket) und stimmst der Verarbeitung deiner Daten gemäß unserer <a href="datenschutz.html" style="text-decoration:underline;">Datenschutzerklärung</a> zu. Die Zahlung läuft nicht über die Website – du erhältst die Rechnung persönlich per E-Mail.</p>
