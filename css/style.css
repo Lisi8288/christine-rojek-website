@@ -1738,6 +1738,7 @@ p.lede {
   margin-top: 2rem;
 }
 .form-row { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-hint { font-size: 0.82rem; color: var(--text-soft); }
 .form-row-pair {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
